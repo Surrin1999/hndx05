@@ -38,6 +38,6 @@
 
 ## API文档
 
-- [钱包服务（wallet-service）](#docs/Wallet-Serice.md)
-- [查询服务（query-service）](#docs/Query-Serice.md)
-- [订单服务（order-service）](#docs/Query-Serice.md)
+- [钱包服务（wallet-service）](https://github.com/Surrin1999/hndx05/blob/master/docs/Wallet-Service.md)
+- [查询服务（query-service）](https://github.com/Surrin1999/hndx05/blob/master/docs/Query-Service.md)
+- [订单服务（order-service）](https://github.com/Surrin1999/hndx05/blob/master/docs/Order-Service.md)
