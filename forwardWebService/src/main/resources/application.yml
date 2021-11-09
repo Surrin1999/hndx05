@@ -1,0 +1,43 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: forward-service
+  cloud:
+    inetutils:
+      timeout-seconds: 10
+
+    gateway:
+      # 路由配置
+      routes:
+        - id: wallet
+          uri: lb://wallet-service
+
+          # 转发wallet微服务的请求
+          predicates:
+            - Path=/wallet/**
+
+        - id: query
+          uri: lb://query-service
+
+          # 转发query微服务的请求
+          predicates:
+            - Path=/query/**
+
+        - id: query
+          uri: lb://order-service
+
+          # 转发order微服务的请求
+          predicates:
+            - Path=/order/**
+
+eureka:
+  instance:
+    instance-id: ForwardService-8081
+    prefer-ip-address: true
+  client:
+    fetch-registry: true
+    register-with-eureka: true
+    service-url:
+      defaultZone: http://127.0.0.1:8086/eureka/

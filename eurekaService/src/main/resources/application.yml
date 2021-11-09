@@ -1,0 +1,18 @@
+server:
+  port: 8086
+
+# 防止给予hostname解析的时间过短，而导致报一个warning
+spring:
+  cloud:
+    inetutils:
+      timeout-seconds: 10
+
+eureka:
+  instance:
+    hostname: 127.0.0.1
+
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://127.0.0.1:8086/eureka/
