@@ -68,4 +68,15 @@
         </dependencies>
     </dependencyManagement>
 
+    <!--  必须加这个plugin，否则打包出来的jar没有依赖  -->
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>2.5.6</version>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

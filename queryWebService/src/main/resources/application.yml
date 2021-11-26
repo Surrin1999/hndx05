@@ -31,7 +31,7 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://127.0.0.1:8086/eureka/
+      defaultZone: http://119.91.26.135:8086/eureka/
 
 # 高德地图配置
 amap:

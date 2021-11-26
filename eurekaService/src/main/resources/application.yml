@@ -9,10 +9,10 @@ spring:
 
 eureka:
   instance:
-    hostname: 127.0.0.1
+    hostname: 119.91.26.135
 
   client:
     register-with-eureka: false
     fetch-registry: false
     service-url:
-      defaultZone: http://127.0.0.1:8086/eureka/
+      defaultZone: http://119.91.26.135:8086/eureka/

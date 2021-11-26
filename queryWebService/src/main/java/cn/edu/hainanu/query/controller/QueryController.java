@@ -55,19 +55,12 @@ public class QueryController {
     }
 
     @GetMapping("/getPrediction")
-    public Map<String, String> getPrediction(String date) {
+    public Map<String, String> getPrediction(String data) {
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("uuuu-M-d H:m:s").withResolverStyle(ResolverStyle.STRICT);
         LocalDateTime localDateTime = null;
-        try {
-            localDateTime = LocalDateTime.parse(date, formatter);
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-            return Collections.singletonMap("message", "请输入正确的时间，输入格式为uuuu-M-d H:m:s");
-        }
         HashMap<String, String> resultMap = new HashMap<>(2);
-        // TODO 根据接口返回数据判断是否预测成功 因为有可能输入的时间没有足够的数据预测（前240小时）
-        resultMap.put("message", "预测成功");
-        resultMap.put("prediction", ticketFeignService.predict(date));
+        resultMap.put("message", "预测完毕");
+        resultMap.put("prediction", ticketFeignService.predict(data));
         return resultMap;
     }
 }

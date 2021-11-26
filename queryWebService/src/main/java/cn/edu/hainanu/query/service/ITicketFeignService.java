@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RequestParam;
 public interface ITicketFeignService {
 
     @GetMapping(value = "/predict")
-    String predict(@RequestParam String date);
+    String predict(@RequestParam String data);
 }
