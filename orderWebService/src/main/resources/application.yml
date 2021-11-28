@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: order-service
+    name: software-orderwebservice
 
   cloud:
     inetutils:
@@ -31,4 +31,4 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://127.0.0.1:8086/eureka/
+      defaultZone: http://software-eurekaservice:8086/eureka/

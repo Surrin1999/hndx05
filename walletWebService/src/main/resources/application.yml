@@ -4,7 +4,7 @@ server:
 
 spring:
   application:
-    name: wallet-service
+    name: software-walletwebservice
 
   cloud:
     inetutils:
@@ -30,4 +30,4 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
     service-url:
-      defaultZone: http://127.0.0.1:8086/eureka/
+      defaultZone: http://software-eurekaservice:8086/eureka/

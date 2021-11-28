@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Component
-@FeignClient("QUERY-SERVICE")
+@FeignClient("SOFTWARE-QUERYWEBSERVICE")
 public interface IOrderFeignService {
 
     @GetMapping("/query/getTicketSurplus")

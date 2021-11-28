@@ -3,7 +3,7 @@ server:
 
 spring:
   application:
-    name: query-service
+    name: software-querywebservice
 
   cloud:
     inetutils:
