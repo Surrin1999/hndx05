@@ -1,4 +1,4 @@
-# 钱包服务（wallet-service）
+# 钱包服务（software-walletwebservice）
 
 
 
@@ -14,9 +14,9 @@
 
 - 查询钱包余额
 
-| URL                                       | Request Method |
-| ----------------------------------------- | -------------- |
-| http://127.0.0.1:8081/wallet/queryBalance | GET            |
+| URL                                | Request Method |
+| ---------------------------------- | -------------- |
+| http://127.0.0.1:8081/queryBalance | GET            |
 
 #### 请求参数说明
 
@@ -56,9 +56,9 @@
 
 - 钱包余额充值
 
-| URL                                          | Request Method |
-| -------------------------------------------- | -------------- |
-| http://127.0.0.1:8081/wallet/rechargeBalance | GET            |
+| URL                                   | Request Method |
+| ------------------------------------- | -------------- |
+| http://127.0.0.1:8081/rechargeBalance | GET            |
 
 #### 请求参数说明
 

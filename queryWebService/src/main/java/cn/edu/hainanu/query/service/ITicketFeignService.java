@@ -6,9 +6,9 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Component
-@FeignClient("SOFTWARE-FORECASTSERVICE")
+@FeignClient("software-forecastservice")
 public interface ITicketFeignService {
 
-    @GetMapping(value = "/predict")
-    String predict(@RequestParam String data);
+    @GetMapping(value = "/predictFlow")
+    String predictFlow(@RequestParam String date);
 }

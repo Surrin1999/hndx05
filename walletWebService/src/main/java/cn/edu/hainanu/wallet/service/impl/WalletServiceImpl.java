@@ -38,7 +38,7 @@ public class WalletServiceImpl extends ServiceImpl<WalletMapper, Wallet> impleme
             return resultMap;
         }
         wallet.setAmount(amountValue.add(wallet.getAmount()));
-        boolean isSuccess = ChainWrappers.lambdaUpdateChain(walletMapper).update(wallet);
+        boolean isSuccess = ChainWrappers.lambdaUpdateChain(walletMapper).eq(Wallet::getId, id).update(wallet);
         resultMap.put("message", isSuccess ? "余额充值成功" : "余额充值失败");
         resultMap.put("amount", wallet.getAmount().toString());
         return resultMap;

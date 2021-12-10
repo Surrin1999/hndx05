@@ -32,12 +32,14 @@
 | MyBatis-Plus | 3.4.3.4（latest）  |
 |    Hutool    |  5.7.15（latest）  |
 |    Lombok    | 1.18.22（latest）  |
-|    Python    |        3.8         |
+|    Python    |        3.7         |
 
 
 
 ## API文档
 
-- [钱包服务（wallet-service）](https://github.com/Surrin1999/hndx05/blob/master/docs/Wallet-Service.md)
-- [查询服务（query-service）](https://github.com/Surrin1999/hndx05/blob/master/docs/Query-Service.md)
-- [订单服务（order-service）](https://github.com/Surrin1999/hndx05/blob/master/docs/Order-Service.md)
+- [钱包服务（software-walletwebservice）](https://github.com/Surrin1999/hndx05/blob/master/docs/software-walletwebservice.md)
+- [查询服务（software-querywebservice）](https://github.com/Surrin1999/hndx05/blob/master/docs/software-querywebservice.md)
+- [订单服务（software-orderwebservice）](https://github.com/Surrin1999/hndx05/blob/master/docs/software-orderwebservice.md)
+
+> 文档均使用本地IP，**部署到K8S平台测试时需替换为微服务名**

@@ -9,28 +9,10 @@ spring:
       timeout-seconds: 10
 
     gateway:
-      # 路由配置
-      routes:
-        - id: wallet
-          uri: lb://software-walletwebservice
-
-          # 转发wallet微服务的请求
-          predicates:
-            - Path=/wallet/**
-
-        - id: query
-          uri: lb://software-querywebservice
-
-          # 转发query微服务的请求
-          predicates:
-            - Path=/query/**
-
-        - id: order
-          uri: lb://software-orderwebservice
-
-          # 转发order微服务的请求
-          predicates:
-            - Path=/order/**
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
 
 eureka:
   instance:

@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 @FeignClient("SOFTWARE-QUERYWEBSERVICE")
 public interface IOrderFeignService {
 
-    @GetMapping("/query/getTicketSurplus")
-    Integer getTicketSurplus(@RequestParam Integer tickedId);
+    @GetMapping("/getTicketSurplus")
+    Integer getTicketSurplus(@RequestParam Integer ticketId);
 
-    @GetMapping("/query/getTicketById")
+    @GetMapping("/getTicketById")
     Ticket getTicketById(@RequestParam Integer ticketId);
 }

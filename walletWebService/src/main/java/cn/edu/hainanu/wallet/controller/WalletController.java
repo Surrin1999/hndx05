@@ -4,21 +4,20 @@ import cn.edu.hainanu.wallet.domain.Wallet;
 import cn.edu.hainanu.wallet.service.IWalletService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/wallet")
 public class WalletController {
 
     @Autowired
     private IWalletService walletService;
 
     @GetMapping("/queryBalance")
-    public Map<String, Object> queryBalance(Integer id) {
+    public Map<String, Object> queryBalance(@RequestParam("id") Integer id) {
         HashMap<String, Object> resultMap = new HashMap<>(2);
         Wallet wallet = walletService.getById(id);
         if (wallet != null) {
@@ -31,7 +30,7 @@ public class WalletController {
     }
 
     @GetMapping("/rechargeBalance")
-    public Object rechargeBalance(Integer id, String amount) {
+    public Object rechargeBalance(@RequestParam("id") Integer id, @RequestParam("amount") String amount) {
         return walletService.rechargeBalance(id, amount);
     }
 
